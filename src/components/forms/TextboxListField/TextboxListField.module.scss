@@ -1,0 +1,39 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  font-size: 14px;
+  cursor: default;
+}
+
+.field {
+  display: grid;
+  column-gap: 18px;
+  grid-template:
+    'textbox remove add'
+    'error   error  error'
+    / 300px max-content max-content;
+}
+
+.emptyAdd {
+  max-width: max-content;
+}
+
+.textbox {
+  grid-area: textbox;
+}
+
+.remove {
+  grid-area: remove;
+}
+
+.add {
+  grid-area: add;
+}
+
+.error {
+  grid-area: error;
+}

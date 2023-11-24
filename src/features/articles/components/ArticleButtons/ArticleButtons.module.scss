@@ -1,0 +1,17 @@
+@use '@/styles/vars/colors';
+
+.layout {
+  // Inner positioning
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.editLink {
+  display: flex;
+  align-items: center;
+}
+
+.popupError {
+  color: colors.$danger;
+}

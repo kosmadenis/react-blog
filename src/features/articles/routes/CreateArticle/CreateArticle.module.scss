@@ -1,0 +1,17 @@
+.layout {
+  // Outer positioning
+  flex-grow: 1;
+
+  // Inner positioning
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  // Sizing
+  box-sizing: border-box;
+  flex-grow: 1;
+  max-width: 950px;
+}

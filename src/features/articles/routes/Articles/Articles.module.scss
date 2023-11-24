@@ -1,0 +1,41 @@
+.layout {
+  // Outer positioning
+  flex-grow: 1;
+
+  // Inner positioning
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.list {
+  // List reset
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  // Outer positioning
+  flex-grow: 1;
+
+  // Inner positioning
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.article {
+  // Outer positioning
+  box-sizing: border-box;
+  max-width: 950px;
+  margin-inline: auto;
+}
+
+.pagination {
+  // Outer positioning
+  align-self: center;
+}
+
+.center {
+  margin-block: auto;
+}

@@ -1,0 +1,12 @@
+@use 'sass:color';
+@use '@/styles/vars/colors';
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-size: 14px;
+}

@@ -1,0 +1,16 @@
+@use '@/styles/mixins/overflow';
+
+.metadata {
+  // Outer positioning
+  float: right;
+  margin-left: 80px;
+  margin-bottom: 25px;
+}
+
+.body {
+  // Outer positioning
+  margin-top: 25px;
+
+  // Overflow
+  @include overflow.break-long-words;
+}

@@ -1,0 +1,47 @@
+// Vars
+@use './vars/colors';
+
+// PostCSS auto-normalize
+@import 'normalize.css';
+
+// Globals
+@import './global/font-inter';
+
+:root {
+  font-family: Inter, sans-serif;
+  color: colors.$text-body;
+}
+
+body {
+  background-color: colors.$bg;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  font-family: Inter, sans-serif;
+  color: colors.$text-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: colors.$text-heading;
+  margin: 0;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}

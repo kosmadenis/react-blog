@@ -1,0 +1,10 @@
+@mixin break-long-words {
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere; // min. Safari 15.4 - rel. 2022-03-15
+}
+
+@mixin one-line-ellipsis {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

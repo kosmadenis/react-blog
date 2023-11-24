@@ -1,0 +1,81 @@
+@use '@/styles/vars/colors';
+@use '@/styles/vars/sizes';
+
+.base {
+  // Resets
+  text-decoration: none;
+  color: unset;
+  border-color: transparent;
+
+  // Animations/transitions
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    color 150ms;
+}
+
+.inline {
+  // Text styling
+  color: colors.$info;
+}
+
+.block {
+  // Border
+  border-radius: sizes.$active-border-radius;
+  border-style: solid;
+  border-width: 1px;
+
+  // Coloring
+  background-color: colors.$input;
+
+  // Inner positioning
+  padding: 8px 16px;
+}
+
+.success {
+  border-color: colors.$success;
+  color: colors.$success;
+
+  &:hover {
+    background-color: colors.$success-hover;
+    border-color: colors.$success-hover;
+    color: colors.$text-on-main;
+  }
+
+  &:active {
+    background-color: colors.$success-active;
+    border-color: colors.$success-active;
+    color: colors.$text-on-main;
+  }
+}
+
+.danger {
+  border-color: colors.$danger;
+  color: colors.$danger;
+
+  &:hover {
+    background-color: colors.$danger-hover;
+    border-color: colors.$danger-hover;
+    color: colors.$text-on-main;
+  }
+
+  &:active {
+    background-color: colors.$danger-active;
+    border-color: colors.$danger-active;
+    color: colors.$text-on-main;
+  }
+}
+
+.transparent {
+  &:hover {
+    background-color: colors.$black-hover;
+    border-color: colors.$black-hover;
+    color: colors.$text-on-main;
+  }
+
+  &:active {
+    background-color: colors.$black-active;
+    border-color: colors.$black-active;
+    color: colors.$text-on-main;
+  }
+}

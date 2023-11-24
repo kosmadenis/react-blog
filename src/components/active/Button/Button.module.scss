@@ -1,0 +1,116 @@
+@use '@/styles/vars/colors';
+@use '@/styles/vars/sizes';
+
+.layout {
+  // Resets
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+
+  // Inner positioning
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+
+  // Shape
+  border-radius: sizes.$active-border-radius;
+
+  // Text styling
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+
+  // Animations/transitions
+  transition:
+    background-color 150ms,
+    color 150ms;
+}
+
+.spinner {
+  height: 1em;
+  width: 1em;
+}
+
+// Submit - white text on {primary} background
+.submit {
+  background-color: colors.$info;
+  color: colors.$text-on-main;
+
+  &:hover {
+    background-color: colors.$info-hover;
+  }
+
+  &:active {
+    background-color: colors.$info-active;
+  }
+}
+
+// Cancel - gray text on white background, gray borders
+.cancel {
+  border: 1px solid colors.$alt-gray;
+  background-color: colors.$input;
+  color: colors.$alt-gray-text;
+
+  &:hover {
+    background-color: colors.$input-hover;
+  }
+
+  &:active {
+    background-color: colors.$input-active;
+  }
+}
+
+// Info - {info} text on white background, {info} borders
+.info {
+  border: 1px solid colors.$info;
+  background-color: colors.$input;
+  color: colors.$info;
+
+  &:hover {
+    background-color: colors.$info-hover;
+    color: colors.$text-on-main;
+  }
+
+  &:active {
+    background-color: colors.$info-active;
+    color: colors.$text-on-main;
+  }
+}
+
+// Danger - {danger} text on white background, {danger} borders
+.danger {
+  border: 1px solid colors.$danger;
+  background-color: colors.$input;
+  color: colors.$danger;
+
+  &:hover {
+    background-color: colors.$danger-hover;
+    color: colors.$text-on-main;
+  }
+
+  &:active {
+    background-color: colors.$danger-active;
+    color: colors.$text-on-main;
+  }
+}
+
+// Black - black text on white background, black borders
+.black {
+  border: 1px solid colors.$black;
+  border-color: colors.$black;
+  color: colors.$black;
+
+  &:hover {
+    background-color: colors.$black-hover;
+    border-color: colors.$black-hover;
+    color: colors.$text-on-main;
+  }
+
+  &:active {
+    background-color: colors.$black-active;
+    border-color: colors.$black-active;
+    color: colors.$text-on-main;
+  }
+}

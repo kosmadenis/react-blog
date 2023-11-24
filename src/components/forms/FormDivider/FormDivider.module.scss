@@ -1,0 +1,11 @@
+@use '@/styles/vars/colors';
+
+.divider {
+  // Outer positioning
+  margin-top: 8px;
+  margin-bottom: -4px;
+
+  // Styling
+  height: 1px;
+  background-color: colors.$alt-gray-light;
+}

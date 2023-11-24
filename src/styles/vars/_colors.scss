@@ -1,0 +1,45 @@
+@use 'sass:color';
+
+// Page backdrop
+$bg: #ebeef3;
+
+// Text colors
+$text-heading: rgba(0 0 0 / 85%);
+$text-body: rgba(0 0 0 / 75%);
+$text-gray: rgba(0 0 0 / 50%);
+
+// Text on top of one of the main colors
+$text-on-main: #fff;
+
+// Info colors
+$info: #1890ff;
+$info-hover: color.adjust($info, $lightness: -5%);
+$info-active: color.adjust($info, $lightness: -10%);
+
+// Danger colors
+$danger: #f5222d;
+$danger-hover: color.adjust($danger, $lightness: -5%);
+$danger-active: color.adjust($danger, $lightness: -10%);
+
+// Success colors
+$success: #52c41a;
+$success-hover: color.adjust($success, $lightness: -5%);
+$success-active: color.adjust($success, $lightness: -10%);
+
+// Card colors
+$card: #fff;
+
+// Inputs background
+$input: #fff;
+$input-hover: color.adjust($input, $lightness: -5%);
+$input-active: color.adjust($input, $lightness: -10%);
+
+// Black inputs
+$black: #373737;
+$black-hover: color.adjust($black, $lightness: 5%);
+$black-active: color.adjust($black, $lightness: 20%);
+
+// Non-text gray
+$alt-gray: #d9d9d9;
+$alt-gray-text: #595959;
+$alt-gray-light: #e8e8e8;

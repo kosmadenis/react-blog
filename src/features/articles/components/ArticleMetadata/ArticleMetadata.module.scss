@@ -1,0 +1,64 @@
+@use 'sass:math';
+@use '@/styles/vars/colors';
+@use '@/styles/mixins/overflow';
+
+$max-width: 250px;
+$pic-size: 48px;
+$gap: 12px;
+
+.layout {
+  // Outer positioning
+  width: max-content;
+  height: max-content;
+
+  // Inner positioning
+  display: grid;
+
+  // prettier-ignore
+  grid-template:
+    'name gap  pic ' (math.div($pic-size, 2) + 2)
+    'date gap  pic ' (math.div($pic-size, 2) - 2)
+    'btns btns btns' 1fr
+    / 1fr $gap $pic-size;
+}
+
+.username {
+  // Outer positioning
+  grid-area: name;
+  place-self: end end;
+
+  // Text styling
+  font-size: 18px;
+  font-weight: 400;
+
+  // Overflow
+  max-width: $max-width - $pic-size - $gap;
+
+  @include overflow.one-line-ellipsis;
+}
+
+.date {
+  // Outer positioning
+  grid-area: date;
+  place-self: start end;
+
+  // Text styling
+  // text-align: right;
+  color: colors.$text-gray;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.profilePic {
+  // Outer positioning
+  grid-area: pic;
+  width: $pic-size;
+  height: $pic-size;
+}
+
+.buttons {
+  // Outer positioning
+  grid-area: btns;
+  margin-top: 30px;
+  justify-self: end;
+}

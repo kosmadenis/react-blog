@@ -1,0 +1,70 @@
+@use 'sass:math';
+@use '@/styles/vars/colors';
+@use '@/styles/mixins/overflow';
+
+$gap: 25px;
+$height-outer: 80px;
+$height-inner: $height-outer - $gap * 2;
+
+.layout {
+  // Outer positioning
+  height: $height-outer;
+  box-sizing: border-box;
+
+  // Inner positioning
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: $gap;
+
+  // Colors
+  background-color: colors.$card;
+}
+
+.title {
+  // Positioning
+  margin-right: $gap;
+  white-space: nowrap;
+
+  // Text styling
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contents {
+  // Outer positioning
+  margin-left: auto;
+
+  // Inner positioning
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $gap;
+}
+
+.userInfo {
+  // Inner positioning
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: math.div($gap, 2);
+}
+
+.userName {
+  // Text styling
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+
+  // Overflow
+  max-width: calc(100vw - 500px);
+
+  @include overflow.one-line-ellipsis;
+}
+
+.profilePic {
+  // Outer positioning
+  width: $height-inner;
+  height: $height-inner;
+}

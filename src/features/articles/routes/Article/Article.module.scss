@@ -1,0 +1,25 @@
+.layout {
+  // Outer positioning
+  flex-grow: 1;
+
+  // Inner positioning
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  // Outer positioning
+  margin-inline: auto;
+
+  // Sizing
+  box-sizing: border-box;
+  max-width: 950px;
+  width: stretch;
+  flex-grow: 1;
+}
+
+.center {
+  // Outer positioning
+  margin-inline: auto;
+}

@@ -1,0 +1,76 @@
+@use '@/styles/vars/colors';
+
+.layout {
+  // Outer + inner positioning
+  display: inline flex;
+
+  // Outer positioning
+  margin-left: 15px;
+  vertical-align: text-top;
+
+  // Inner positioning
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.buttonContainer {
+  // Sizing
+  width: 16px;
+  height: 16px;
+}
+
+.buttonIcon {
+  // Sizing
+  width: 16px;
+  height: 16px;
+
+  // Colors
+  fill: none;
+  stroke: colors.$text-body;
+
+  // Transitions
+  transition:
+    fill 100ms,
+    stroke 100ms;
+}
+
+.buttonInput {
+  // Reset
+  appearance: none;
+  position: absolute;
+
+  // Sizing
+  width: 16px;
+  height: 16px;
+
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &:checked + .buttonIcon {
+    stroke: colors.$danger;
+    fill: colors.$danger;
+  }
+
+  &:enabled:hover + .buttonIcon {
+    stroke: colors.$danger-hover;
+  }
+
+  &:enabled:active + .buttonIcon {
+    stroke: colors.$danger-active;
+  }
+
+  &:checked:enabled:hover + .buttonIcon {
+    fill: colors.$danger-hover;
+  }
+
+  &:checked:enabled:active + .buttonIcon {
+    fill: colors.$danger-active;
+  }
+}
+
+.count {
+  // Text styling
+  font-size: 12px;
+}

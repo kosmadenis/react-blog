@@ -1,0 +1,14 @@
+@use '@/styles/vars/colors';
+
+.layout {
+  // Inner positioning
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.submit {
+  // Outer positioning
+  margin-top: 8px;
+  max-width: 320px;
+}

@@ -1,0 +1,57 @@
+@use '@/styles/vars/colors';
+@use '@/styles/mixins/overflow';
+
+.title {
+  // Outer positioning
+  display: inline;
+
+  // Text styling
+  color: colors.$info;
+  font-size: 20px;
+  font-weight: 400;
+
+  // Overflow
+  @include overflow.break-long-words;
+}
+
+.tags {
+  // Outer positioning
+  margin-top: 8px;
+
+  // Inner positioning
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+}
+
+.tag {
+  // Inner positioning
+  padding: 2px 5px;
+
+  // Text styling
+  color: colors.$text-gray;
+  font-size: 12px;
+
+  // Border
+  border-radius: 2px;
+  border: 1px solid colors.$text-gray;
+
+  // Overflow
+  @include overflow.one-line-ellipsis;
+}
+
+.description {
+  // Outer positioning
+  margin-bottom: 0;
+  margin-top: 8px;
+
+  // Text styling
+  font-size: 12px;
+
+  // Overflow
+  @include overflow.break-long-words;
+
+  &Gray {
+    color: colors.$text-gray;
+  }
+}

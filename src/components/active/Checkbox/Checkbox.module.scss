@@ -1,0 +1,45 @@
+@use '@/styles/vars/colors';
+
+.layout {
+  // Reset
+  appearance: none;
+
+  // Sizing
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+
+  // Common state appearance
+  border-radius: 1.5px;
+
+  // Base state appearance
+  border: 1px solid colors.$alt-gray;
+  background: colors.$input;
+
+  // Animations/transitions
+  transition: background-color 150ms;
+
+  // States
+
+  &:hover {
+    background: colors.$input-hover;
+  }
+
+  &:active {
+    background: colors.$input-active;
+  }
+
+  &:checked {
+    border: none;
+    background: no-repeat center/100% url('./check-mark.svg');
+    background-color: colors.$info;
+
+    &:hover {
+      background-color: colors.$info-hover;
+    }
+
+    &:active {
+      background-color: colors.$info-active;
+    }
+  }
+}

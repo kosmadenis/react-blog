@@ -1,0 +1,5 @@
+{
+  "!(*.{js,jsx,ts,tsx})": "prettier --ignore-unknown --check",
+  "*.{js,jsx,ts,tsx}": "eslint --color",
+  "*.{css,scss}": "stylelint --color"
+}
