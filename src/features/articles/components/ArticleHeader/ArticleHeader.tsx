@@ -30,9 +30,9 @@ const ArticleHeader: React.FC<Props> = ({
 }) => {
   const tags = tagList.map((tag, i) => (
     // eslint-disable-next-line react/no-array-index-key
-    <span className={classes.tag} key={i}>
+    <li className={classes.tag} key={i}>
       {tag}
-    </span>
+    </li>
   ))
 
   return (
@@ -45,7 +45,7 @@ const ArticleHeader: React.FC<Props> = ({
         state={favorited}
         count={favoritesCount}
       />
-      <div className={classes.tags}>{tags}</div>
+      <ul className={classes.tags}>{tags}</ul>
       <p className={clsx(classes.description, full && classes.descriptionGray)}>
         {description}
       </p>
