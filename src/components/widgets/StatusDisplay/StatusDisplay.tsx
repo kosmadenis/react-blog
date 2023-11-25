@@ -3,9 +3,9 @@ import clsx from 'clsx'
 import { capitalize } from 'lodash-es'
 
 import type { FetchError } from '@/store/fetch'
-import Spinner from '@/components/passive/Spinner'
-import Button from '@/components/active/Button'
-import Link from '@/components/active/Link'
+import Spinner from '@/components/elements/Spinner'
+import Button from '@/components/elements/Button'
+import Link from '@/components/elements/Link'
 
 import classes from './StatusDisplay.module.scss'
 

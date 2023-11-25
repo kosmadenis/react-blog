@@ -2,7 +2,7 @@ import React, { type PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import type { FieldErrors } from 'react-hook-form'
 
-import Button from '@/components/active/Button'
+import Button from '@/components/elements/Button'
 
 import FieldErrorMessage from '../FieldErrorMessage'
 

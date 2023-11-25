@@ -2,8 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import type { RootState } from '@/store'
-import ProfilePicture from '@/components/passive/ProfilePicture'
-import Link from '@/components/active/Link'
+import Link from '@/components/elements/Link'
+import ProfilePicture from '@/components/widgets/ProfilePicture'
 import SignOutButton from '@/features/user/components/SignOutButton'
 
 import classes from './Header.module.scss'

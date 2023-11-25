@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import Spinner from '@/components/passive/Spinner'
+import Spinner from '@/components/elements/Spinner'
 
 import classes from './Button.module.scss'
 

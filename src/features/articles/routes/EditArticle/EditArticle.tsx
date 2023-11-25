@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import type { AppDispatch, RootState } from '@/store'
 import type { FetchError } from '@/store/fetch'
+import Link from '@/components/elements/Link'
+import StatusDisplay from '@/components/widgets/StatusDisplay'
 import Card from '@/components/containers/Card'
-import StatusDisplay from '@/components/passive/StatusDisplay'
-import Link from '@/components/active/Link'
 
 import { fetchSingleArticle } from '../../store/thunks/fetch-single'
 import CreateEditArticleForm from '../../components/CreateEditArticleForm'

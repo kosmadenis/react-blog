@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
 import type { AppDispatch } from '@/store'
-import Link from '@/components/active/Link'
-import Button from '@/components/active/Button'
+import Link from '@/components/elements/Link'
+import Button from '@/components/elements/Button'
 
 import { deleteArticle } from '../../store/thunks/delete-article'
 

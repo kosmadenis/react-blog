@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import { useSelector } from 'react-redux'
 
 import type { RootState } from '@/store'
-import ProfilePicture from '@/components/passive/ProfilePicture'
+import ProfilePicture from '@/components/widgets/ProfilePicture'
 
 import ArticleButtons from '../ArticleButtons'
 

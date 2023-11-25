@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Link from '@/components/active/Link'
+import Link from '@/components/elements/Link'
 import Card from '@/components/containers/Card'
 
 import SignInForm from '../../components/SignInForm'

@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import type { FieldError, UseFormRegisterReturn } from 'react-hook-form'
 
-import Checkbox from '@/components/active/Checkbox'
+import Checkbox from '@/components/elements/Checkbox'
 
 import FieldErrorMessage from '../FieldErrorMessage'
 

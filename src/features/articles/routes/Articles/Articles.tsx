@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Pagination } from 'antd'
 
 import type { AppDispatch, RootState } from '@/store'
-import StatusDisplay from '@/components/passive/StatusDisplay'
+import StatusDisplay from '@/components/widgets/StatusDisplay'
 
 import ArticleCard from '../../components/ArticleCard'
 import { fetchArticlesList } from '../../store/thunks/fetch-list'

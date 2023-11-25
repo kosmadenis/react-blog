@@ -5,7 +5,7 @@ import type { FieldError, UseFormRegisterReturn } from 'react-hook-form'
 import Textbox, {
   type InputAutoComplete,
   type InputType,
-} from '@/components/active/Textbox'
+} from '@/components/elements/Textbox'
 
 import FieldErrorMessage from '../FieldErrorMessage'
 

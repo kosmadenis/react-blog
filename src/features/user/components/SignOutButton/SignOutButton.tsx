@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 
 import type { AppDispatch } from '@/store'
-import Button from '@/components/active/Button'
+import Button from '@/components/elements/Button'
 
 import { logOut } from '../../store/thunks/log-out'
 

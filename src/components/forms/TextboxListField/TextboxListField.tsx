@@ -7,11 +7,11 @@ import type {
   UseFormRegisterReturn,
 } from 'react-hook-form'
 
-import Button from '@/components/active/Button'
+import Button from '@/components/elements/Button'
 import Textbox, {
   type InputAutoComplete,
   type InputType,
-} from '@/components/active/Textbox'
+} from '@/components/elements/Textbox'
 
 import FieldErrorMessage from '../FieldErrorMessage'
 

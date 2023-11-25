@@ -1,6 +1,6 @@
 import React from 'react'
 
-import StatusDisplay from '@/components/passive/StatusDisplay'
+import StatusDisplay from '@/components/widgets/StatusDisplay'
 
 import classes from '../StatusCommon.module.scss'
 

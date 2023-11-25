@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import type { AppDispatch, RootState } from '@/store'
 import type { FetchError } from '@/store/fetch'
-import StatusDisplay from '@/components/passive/StatusDisplay'
+import StatusDisplay from '@/components/widgets/StatusDisplay'
 
 import ArticleCard from '../../components/ArticleCard'
 import { fetchSingleArticle } from '../../store/thunks/fetch-single'

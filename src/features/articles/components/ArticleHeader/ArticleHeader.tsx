@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import Link from '@/components/active/Link'
+import Link from '@/components/elements/Link'
 
 import ArticleFavoriteBlock from '../ArticleFavoriteBlock'
 
