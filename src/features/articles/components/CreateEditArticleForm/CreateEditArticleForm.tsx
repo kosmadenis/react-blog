@@ -1,22 +1,16 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
 import { type SubmitHandler, useForm, useFieldArray } from 'react-hook-form'
 
 import setFieldErrors from '@/util/forms/set-field-errors'
-import type { AppDispatch } from '@/store'
 import Form from '@/components/forms/Form'
 import TextboxField from '@/components/forms/TextboxField'
 import TextboxListField, {
   type TextboxListFieldItem,
 } from '@/components/forms/TextboxListField'
 
-import { editArticle } from '../../store/thunks/edit-article'
-import { createArticle } from '../../store/thunks/create-article'
-
 import classes from './CreateEditArticleForm.module.scss'
 
-interface FormData {
+export interface FormData {
   title: string
   description: string
   body: string
@@ -25,14 +19,21 @@ interface FormData {
 
 interface Props {
   className?: string
-  article?: Model.Article
+  title?: string
+  description?: string
+  body?: string
+  tagList?: string[]
+  submitAction: (data: FormData) => Promise<null | { error: any }>
 }
 
-const CreateEditArticleFrom: React.FC<Props> = ({ className, article }) => {
-  const navigate = useNavigate()
-
-  const dispatch = useDispatch<AppDispatch>()
-
+const CreateEditArticleForm: React.FC<Props> = ({
+  className,
+  title,
+  description,
+  body,
+  tagList,
+  submitAction,
+}) => {
   const {
     control,
     register,
@@ -41,10 +42,10 @@ const CreateEditArticleFrom: React.FC<Props> = ({ className, article }) => {
     formState: { errors, isSubmitting },
   } = useForm<FormData>({
     defaultValues: {
-      title: article?.title,
-      description: article?.description,
-      body: article?.body,
-      tagList: article?.tagList.map((value) => ({ value })),
+      title,
+      description,
+      body,
+      tagList: tagList?.map((value) => ({ value })),
     },
   })
 
@@ -54,30 +55,15 @@ const CreateEditArticleFrom: React.FC<Props> = ({ className, article }) => {
   })
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    const newArticle: Model.BaseArticle = {
-      title: data.title,
-      description: data.description,
-      body: data.body,
-      tagList: data.tagList.map((obj) => obj.value),
-    }
+    const result = await submitAction(data)
 
-    const action = article
-      ? editArticle({ slug: article.slug, article: newArticle })
-      : createArticle(newArticle)
-
-    const result = await dispatch(action)
-
-    if (result.status === 'error') {
+    if (result) {
       setFieldErrors(result.error, setError, [
         'title',
         'description',
         'body',
         'tagList',
       ])
-    }
-
-    if (result.status === 'ok') {
-      navigate(`/articles/${result.value.slug}`)
     }
   }
 
@@ -142,4 +128,4 @@ const CreateEditArticleFrom: React.FC<Props> = ({ className, article }) => {
   )
 }
 
-export default CreateEditArticleFrom
+export default CreateEditArticleForm

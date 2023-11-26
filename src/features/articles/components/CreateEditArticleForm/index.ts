@@ -1,1 +1,1 @@
-export { default } from './CreateEditArticleForm'
+export { default, type FormData } from './CreateEditArticleForm'

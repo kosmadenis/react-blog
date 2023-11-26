@@ -10,7 +10,7 @@ import StatusDisplay from '@/components/widgets/StatusDisplay'
 import Card from '@/components/containers/Card'
 
 import { fetchSingleArticle } from '../../store/thunks/fetch-single'
-import CreateEditArticleForm from '../../components/CreateEditArticleForm'
+import EditArticleWrapper from '../../components/EditArticleWrapper/EditArticleWrapper'
 
 import classes from './EditArticle.module.scss'
 
@@ -92,7 +92,7 @@ const EditArticle: React.FC<Props> = () => {
   const articleElement = !(loading || error || editingNotAllowed) &&
     article && (
       <Card className={classes.card} title="Edit article">
-        <CreateEditArticleForm article={article} />
+        <EditArticleWrapper article={article} />
       </Card>
     )
 
